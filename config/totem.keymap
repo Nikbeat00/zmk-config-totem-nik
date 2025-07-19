@@ -106,10 +106,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp DE_Q              &kp DE_W            &kp DE_E        &kp DE_R             &kp DE_T     &kp DE_Z           &kp DE_U        &kp DE_I        &kp DE_O       &kp DE_P
-                &mt DE_A_UMLAUT DE_A  &mt DE_ESZETT DE_S  &mt LCTRL DE_D  &mt LEFT_SHIFT DE_F  &kp DE_G     &kp DE_H           &mt RSHFT DE_J  &mt RCTRL DE_K  &mt RALT DE_L  &mt RGUI O
-&kp LEFT_SHIFT  &kp DE_Y              &kp DE_X            &kp DE_C        &kp DE_V             &kp DE_B     &mt DE_TILDE DE_N  &kp DE_M        &kp COMMA       &kp DOT        &kp FSLH    &kp BSLH
-                                                          &kp DEL         &lt NAV TAB          &kp SPACE    &kp RET            &lt SYM ESC     &kp BSPC
+                &kp DE_Q              &kp DE_W            &kp DE_E          &kp DE_R      &kp DE_T    &kp DE_Z        &mt DE_U_UMLAUT DE_U  &kp DE_I       &mt DE_O_UMLAUT DE_O  &kp DE_P
+                &mt DE_A_UMLAUT DE_A  &mt DE_ESZETT DE_S  &kp DE_D          &kp DE_F      &kp DE_G    &kp DE_H        &kp DE_J              &kp DE_K       &kp DE_L              &kp DE_APOSTROPHE
+&kp LEFT_SHIFT  &kp DE_Y              &kp DE_X            &kp DE_C          &kp DE_V      &kp DE_B    &mt TILDE DE_N  &kp DE_M              &kp DE_COMMA   &kp DE_PERIOD         &kp DE_MINUS       &mt DE_GRAVE DE_ACUTE
+                                                          &kp LEFT_COMMAND  &kp DE_SPACE  &kp TAB     &kp ENTER       &kp DE_SPACE          &kp BACKSPACE
             >;
         };
 
