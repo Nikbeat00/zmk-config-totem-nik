@@ -58,6 +58,11 @@
             bindings = <&kp DE_AMPERSAND>;
             key-positions = <12 17>;
         };
+
+        zero {
+            bindings = <&kp DE_N0>;
+            key-positions = <22 23 24>;
+        };
     };
 
     behaviors {
