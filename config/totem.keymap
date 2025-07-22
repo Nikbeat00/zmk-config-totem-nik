@@ -53,6 +53,11 @@
             bindings = <&kp LEFT_ALT>;
             key-positions = <10 11>;
         };
+
+        and {
+            bindings = <&kp DE_AMPERSAND>;
+            key-positions = <12 17>;
+        };
     };
 
     behaviors {
@@ -60,6 +65,17 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MO_TAP_LAY";
             bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            hold-while-undecided;
+        };
+
+        tog_tap_lay: tog_tap_lay {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOG_TAP_LAY";
+            bindings = <&tog>, <&to>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -127,9 +143,9 @@
             label = "NUM2";
             bindings = <
                   &none       &kp K_MUTE      &kp C_VOL_DN          &kp C_VOL_UP     &kp C_BRIGHTNESS_INC    &kp DE_MINUS  &kp DE_N7     &kp DE_N8      &kp DE_N9  &kp DE_SLASH
-                  &kp C_PREV  &kp C_PAUSE     &kp UP_ARROW          &kp C_NEXT       &kp C_BRIGHTNESS_DEC    &kp DE_PLUS   &kp DE_N4     &kp DE_N5      &kp DE_N6  &kp DE_ASTERISK
+                  &kp C_PREV  &kp C_PP        &kp UP_ARROW          &kp C_NEXT       &kp C_BRIGHTNESS_DEC    &kp DE_PLUS   &kp DE_N4     &kp DE_N5      &kp DE_N6  &kp DE_ASTERISK
 &kp LEFT_COMMAND  &none       &kp LEFT_ARROW  &kp DOWN_ARROW        &kp RIGHT_ARROW  &to 2                   &kp DE_N0     &kp DE_N1     &kp DE_N2      &kp DE_N3  &kp DE_HASH      &mt LA(DE_N1) LA(DE_ESZETT)
-                                              &mt LEFT_CONTROL TAB  &kp LEFT_SHIFT   &mo_tap_lay 0 0         &kp ENTER     &kp DE_SPACE  &kp BACKSPACE
+                                              &mt LEFT_CONTROL TAB  &kp LEFT_SHIFT   &tog_tap_lay 3 0        &kp ENTER     &kp DE_SPACE  &kp BACKSPACE
             >;
         };
     };
