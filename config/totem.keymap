@@ -109,7 +109,7 @@
                   &kp DE_N1   &kp DE_N2         &kp DE_N3             &kp DE_N4             &kp DE_N5               &kp DE_N6     &kp DE_N7        &kp DE_N8       &kp DE_N9        &kp DE_N0
                   &kp K_MUTE  &kp C_VOL_DN      &kp C_VOL_UP          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &kp DE_PLUS   &kp DE_ASTERISK  &kp UP_ARROW    &kp DE_SLASH     &kp DE_HASH
 &kp LEFT_COMMAND  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT            &to 2                 &none                   &kp DE_MINUS  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none        &mt LA(DE_EXCL) LA(DE_QMARK)
-                                                &mt LEFT_CONTROL TAB  &kp LEFT_SHIFT        &none                   &kp ENTER     &kp DE_SPACE     &kp BACKSPACE
+                                                &mt LEFT_CONTROL TAB  &kp LEFT_SHIFT        &mo_tap_lay 0 0         &kp ENTER     &kp DE_SPACE     &kp BACKSPACE
             >;
         };
 
