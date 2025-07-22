@@ -55,6 +55,19 @@
         };
     };
 
+    behaviors {
+        mo_tap_lay: mo_tap_lay {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_TAP_LAY";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            hold-while-undecided;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -77,10 +90,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &mt DE_LT DE_ACUTE     &mt DE_APOSTROPHE DE_COMMA  &mt DE_DOUBLE_QUOTES DE_DOT  &kp DE_P              &kp DE_Y    &kp DE_F   &kp DE_G      &kp DE_C       &kp DE_R           &kp DE_L
-                  &mt DE_A_UMLAUT DE_A   &mt DE_O_UMLAUT DE_O        &mt DE_EURO DE_E             &mt DE_U_UMLAUT DE_U  &kp DE_I    &kp DE_D   &kp DE_H      &kp DE_T       &mt LA(DE_N) DE_N  &mt DE_ESZETT DE_S
-&kp LEFT_COMMAND  &mt DE_CARET DE_MINUS  &mt RA(DE_L) DE_Q           &mt LG(DE_C) DE_J            &mt LG(DE_V) DE_K     &kp DE_X    &kp DE_B   &kp DE_M      &kp DE_W       &kp DE_V           &kp DE_Z            &mt DE_EXCL DE_QUESTION
-                                                                     &mt LEFT_CONTROL TAB         &kp LEFT_SHIFT        &mo 1       &kp ENTER  &kp DE_SPACE  &kp BACKSPACE
+                  &mt DE_LT DE_ACUTE     &mt DE_APOSTROPHE DE_COMMA  &mt DE_DOUBLE_QUOTES DE_DOT  &kp DE_P              &kp DE_Y           &kp DE_F   &kp DE_G      &kp DE_C       &kp DE_R           &kp DE_L
+                  &mt DE_A_UMLAUT DE_A   &mt DE_O_UMLAUT DE_O        &mt DE_EURO DE_E             &mt DE_U_UMLAUT DE_U  &kp DE_I           &kp DE_D   &kp DE_H      &kp DE_T       &mt LA(DE_N) DE_N  &mt DE_ESZETT DE_S
+&kp LEFT_COMMAND  &mt DE_CARET DE_MINUS  &mt RA(DE_L) DE_Q           &mt LG(DE_C) DE_J            &mt LG(DE_V) DE_K     &kp DE_X           &kp DE_B   &kp DE_M      &kp DE_W       &kp DE_V           &kp DE_Z            &mt DE_EXCL DE_QUESTION
+                                                                     &mt LEFT_CONTROL TAB         &kp LEFT_SHIFT        &mo_tap_lay 1 1    &kp ENTER  &kp DE_SPACE  &kp BACKSPACE
             >;
         };
 
