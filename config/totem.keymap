@@ -102,7 +102,7 @@
             bindings = <
                   &mt DE_LT DE_ACUTE     &mt DE_APOSTROPHE DE_COMMA  &mt DE_DOUBLE_QUOTES DE_DOT  &kp DE_P              &kp DE_Y           &kp DE_F   &kp DE_G      &kp DE_C       &kp DE_R           &kp DE_L
                   &mt DE_A_UMLAUT DE_A   &mt DE_O_UMLAUT DE_O        &mt DE_EURO DE_E             &mt DE_U_UMLAUT DE_U  &kp DE_I           &kp DE_D   &kp DE_H      &kp DE_T       &mt LA(DE_N) DE_N  &mt DE_ESZETT DE_S
-&kp LEFT_COMMAND  &mt DE_CARET DE_MINUS  &mt RA(DE_L) DE_Q           &mt LG(DE_C) DE_J            &mt LG(DE_V) DE_K     &kp DE_X           &kp DE_B   &kp DE_M      &kp DE_W       &kp DE_V           &kp DE_Z            &mt DE_EXCL DE_QUESTION
+&kp LEFT_COMMAND  &mt DE_CARET DE_MINUS  &mt RA(DE_L) DE_Q           &mt LG(DE_C) DE_J            &mt LG(DE_V) DE_K     &kp DE_X           &kp DE_B   &kp DE_M      &kp DE_W       &kp DE_V           &mt LG(DE_Z) DE_Z   &mt DE_EXCL DE_QUESTION
                                                                      &mt LEFT_CONTROL TAB         &kp LEFT_SHIFT        &mo_tap_lay 1 1    &kp ENTER  &kp DE_SPACE  &kp BACKSPACE
             >;
         };
@@ -110,10 +110,10 @@
         number_layer {
             label = "NUM";
             bindings = <
-                  &kp DE_SLASH     &kp DE_N7  &kp DE_N8             &kp DE_N9       &kp DE_MINUS    &kp C_PREV  &mt LA(DE_N7) LS(LA(DE_N7))  &kp UP_ARROW    &kp DE_HASH      &kp C_BRIGHTNESS_INC
-                  &kp DE_ASTERISK  &kp DE_N4  &kp DE_N5             &kp DE_N6       &kp DE_PLUS     &kp C_PP    &kp LEFT_ARROW               &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_BRIGHTNESS_DEC
-&kp LEFT_COMMAND  &kp LEFT_ALT     &kp DE_N1  &kp DE_N2             &kp DE_N3       &kp DE_N0       &kp C_NEXT  &kp K_MUTE                   &kp C_VOL_DN    &kp C_VOL_UP     &to 2                 &mt LA(DE_N1) LA(DE_ESZETT)
-                                              &mt LEFT_CONTROL TAB  &kp LEFT_SHIFT  &to 0           &kp ENTER   &kp DE_SPACE                 &kp BACKSPACE
+                  &kp DE_SLASH     &kp DE_N7  &kp DE_N8             &kp DE_N9       &mt LG(DE_MINUS) DE_MINUS    &kp C_PREV  &mt LA(DE_N7) LS(LA(DE_N7))  &kp UP_ARROW    &kp DE_HASH      &kp C_BRIGHTNESS_INC
+                  &kp DE_ASTERISK  &kp DE_N4  &kp DE_N5             &kp DE_N6       &mt LG(DE_PLUS) DE_PLUS      &kp C_PP    &kp LEFT_ARROW               &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_BRIGHTNESS_DEC
+&kp LEFT_COMMAND  &kp LEFT_ALT     &kp DE_N1  &kp DE_N2             &kp DE_N3       &mt LG(DE_N0) DE_N0          &kp C_NEXT  &kp K_MUTE                   &kp C_VOL_DN    &kp C_VOL_UP     &to 2                 &mt LA(DE_N1) LA(DE_ESZETT)
+                                              &mt LEFT_CONTROL TAB  &kp LEFT_SHIFT  &to 0                        &kp ENTER   &kp DE_SPACE                 &kp BACKSPACE
             >;
         };
 
