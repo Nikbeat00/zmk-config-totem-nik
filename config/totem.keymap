@@ -56,7 +56,7 @@
 
         and {
             bindings = <&kp DE_AMPERSAND>;
-            key-positions = <12 17>;
+            key-positions = <2 4>;
         };
 
         zero {
@@ -110,7 +110,7 @@
         number_layer {
             label = "NUM";
             bindings = <
-                  &kp DE_SLASH     &kp DE_N7  &kp DE_N8             &kp DE_N9       &mt LG(DE_MINUS) DE_MINUS    &kp C_PREV  &mt LA(DE_N7) LS(LA(DE_N7))  &kp UP_ARROW    &kp DE_HASH      &kp C_BRIGHTNESS_INC
+                  &kp DE_HASH      &kp DE_N7  &kp DE_N8             &kp DE_N9       &mt LG(DE_MINUS) DE_MINUS    &kp C_PREV  &mt LA(DE_N7) LS(LA(DE_N7))  &kp UP_ARROW    &kp DE_HASH      &kp C_BRIGHTNESS_INC
                   &kp DE_ASTERISK  &kp DE_N4  &kp DE_N5             &kp DE_N6       &mt LG(DE_PLUS) DE_PLUS      &kp C_PP    &kp LEFT_ARROW               &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_BRIGHTNESS_DEC
 &kp LEFT_COMMAND  &kp LEFT_ALT     &kp DE_N1  &kp DE_N2             &kp DE_N3       &mt LG(DE_N0) DE_N0          &kp C_NEXT  &kp K_MUTE                   &kp C_VOL_DN    &kp C_VOL_UP     &to 2                 &mt LA(DE_N1) LA(DE_ESZETT)
                                               &mt LEFT_CONTROL TAB  &kp LEFT_SHIFT  &to 0                        &kp ENTER   &kp DE_SPACE                 &kp BACKSPACE
