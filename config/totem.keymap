@@ -44,8 +44,8 @@
             key-positions = <16 17 18>;
         };
 
-        capslock {
-            bindings = <&kp CAPSLOCK>;
+        numlayer {
+            bindings = <&to 1>;
             key-positions = <32 33 34>;
         };
 
