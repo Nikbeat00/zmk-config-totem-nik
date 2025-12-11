@@ -70,12 +70,12 @@
         };
 
         undo {
-            bindings = <&kt LG(DE_Z)>;
+            bindings = <&kp LG(DE_Z)>;
             key-positions = <27 28 29>;
         };
 
         redo {
-            bindings = <&kt LG(LS(DE_Z))>;
+            bindings = <&kp LG(LS(DE_Z))>;
             key-positions = <6 7 8>;
         };
     };
