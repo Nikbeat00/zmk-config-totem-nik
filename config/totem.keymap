@@ -78,6 +78,11 @@
             bindings = <&kp LG(LS(DE_Z))>;
             key-positions = <6 7 8>;
         };
+
+        name {
+            bindings = <&name>;
+            key-positions = <26 18>;
+        };
     };
 
     behaviors {
@@ -90,6 +95,15 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-while-undecided;
+        };
+    };
+
+    macros {
+        name: name {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp I &kp K &kp L &kp A &kp S &kp SPACE &kp LS(L) &kp O &kp B &kp M &kp A &kp Y &kp R>;
+            label = "NAME";
         };
     };
 
