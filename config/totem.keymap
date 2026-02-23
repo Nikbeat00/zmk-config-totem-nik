@@ -65,7 +65,7 @@
         };
 
         capslock {
-            bindings = <&kt CAPSLOCK>;
+            bindings = <&caps_word>;
             key-positions = <35 36 37>;
         };
 
@@ -102,7 +102,7 @@
         name: name {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp I &kp K &kp L &kp A &kp S &kp SPACE &kp LS(L) &kp O &kp B &kp M &kp A &kp Y &kp R>;
+            bindings = <&kp LS(DE_N) &kp DE_I &kp DE_K &kp DE_L &kp DE_A &kp DE_S &kp DE_SPACE &kp LS(DE_L) &kp DE_O &kp DE_B &kp DE_M &kp DE_A &kp DE_Y &kp DE_R>;
             label = "NAME";
         };
     };
