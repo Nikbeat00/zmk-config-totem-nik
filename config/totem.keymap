@@ -81,12 +81,22 @@
 
         name {
             bindings = <&name>;
-            key-positions = <26 18>;
+            key-positions = <26 7>;
         };
 
         ene {
             bindings = <&ene>;
             key-positions = <26 16>;
+        };
+
+        id {
+            bindings = <&id>;
+            key-positions = <22 23>;
+        };
+
+        email {
+            bindings = <&email>;
+            key-positions = <26 18>;
         };
     };
 
@@ -116,6 +126,20 @@
             #binding-cells = <0>;
             bindings = <&kp LA(DE_N) &kp DE_N>;
             label = "ENE";
+        };
+
+        id: id {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_N) &kp DE_N8 &kp LS(DE_S) &kp LS(DE_T) &kp DE_MINUS &kp LS(DE_X) &kp DE_N6 &kp DE_N8>;
+            label = "ID";
+        };
+
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_L &kp DE_O &kp DE_B &kp DE_M &kp DE_A &kp DE_Y &kp DE_R &kp DE_PERIOD &kp DE_N &kp LA(DE_L) &kp DE_G &kp DE_M &kp DE_A &kp DE_I &kp DE_L &kp DE_PERIOD &kp DE_C &kp DE_O &kp DE_M>;
+            label = "EMAIL";
         };
     };
 
