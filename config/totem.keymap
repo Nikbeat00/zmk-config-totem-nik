@@ -98,6 +98,11 @@
             bindings = <&email>;
             key-positions = <26 18>;
         };
+
+        emailsofa {
+            bindings = <&emailsofa>;
+            key-positions = <26 18 11>;
+        };
     };
 
     behaviors {
@@ -179,11 +184,11 @@
             label = "ID";
         };
 
-        email: email {
+        emailsofa: emailsofa {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_L &kp DE_O &kp DE_B &kp DE_M &kp DE_A &kp DE_Y &kp DE_R &kp DE_PERIOD &kp DE_N &kp LA(DE_L) &kp DE_G &kp DE_M &kp DE_A &kp DE_I &kp DE_L &kp DE_PERIOD &kp DE_C &kp DE_O &kp DE_M>;
-            label = "EMAIL";
+            bindings = <&kp DE_N &kp DE_I &kp DE_K &kp DE_L &kp DE_A &kp DE_S &kp DE_PERIOD &kp DE_L &kp DE_O &kp DE_B &kp DE_M &kp DE_A &kp DE_Y &kp DE_R &kp LA(DE_L) &kp DE_S &kp DE_O &kp DE_F &kp DE_A &kp DE_T &kp DE_U &kp DE_T &kp DE_O &kp DE_R &kp DE_PERIOD &kp DE_C &kp DE_O &kp DE_M>;
+            label = "EMAILSOFA";
         };
 
         shift: shift {
@@ -218,6 +223,13 @@
             #binding-cells = <0>;
             bindings = <&kp LA(DE_U) &kp DE_I>;
             label = "DIARESES";
+        };
+
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_L &kp DE_O &kp DE_B &kp DE_M &kp DE_A &kp DE_Y &kp DE_R &kp DE_PERIOD &kp DE_N &kp LA(DE_L) &kp DE_G &kp DE_M &kp DE_A &kp DE_I &kp DE_L &kp DE_PERIOD &kp DE_C &kp DE_O &kp DE_M>;
+            label = "EMAIL";
         };
     };
 
