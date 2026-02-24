@@ -98,6 +98,11 @@
             bindings = <&email>;
             key-positions = <26 18>;
         };
+
+        ae {
+            bindings = <&as DE_A_UMLAUT>;
+            key-positions = <10 33>;
+        };
     };
 
     behaviors {
@@ -118,7 +123,9 @@
             bindings = <&shift>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <100>;
         };
     };
 
@@ -201,10 +208,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &as DE_Q              &as DE_W            &mt DE_EURO DE_E      &as DE_R           &as DE_T           &kp DE_Z           &mt DE_U_UMLAUT DE_U  &kp DE_I                     &mt DE_O_UMLAUT DE_O            &kp DE_P
-                  &mt DE_A_UMLAUT DE_A  &mt DE_ESZETT DE_S  &kp DE_D              &kp DE_F           &kp DE_G           &kp DE_H           &kp DE_J              &kp DE_K                     &mt LA(DE_L) DE_L               &mt DE_LESS_THAN DE_ACUTE
-&kp LEFT_COMMAND  &kp DE_Y              &mt LA(DE_C) DE_X   &mt LG(DE_C) DE_C     &mt LG(DE_V) DE_V  &kp DE_B           &mt LA(DE_N) DE_N  &kp DE_M              &mt DE_APOSTROPHE DE_COMMA   &mt DE_DOUBLE_QUOTES DE_PERIOD  &mt DE_CARET DE_MINUS      &mt DE_EXCL DE_QUESTION
-                                                            &mt LEFT_CONTROL TAB  &sk LEFT_SHIFT     &mo_tap_lay 1 1    &kp ENTER          &kp DE_SPACE          &mt LA(BACKSPACE) BACKSPACE
+                  &as DE_Q  &as DE_W            &mt DE_EURO DE_E      &as DE_R           &as DE_T           &as DE_Z           &mt DE_U_UMLAUT DE_U  &as DE_I                     &mt DE_O_UMLAUT DE_O            &as DE_P
+                  &as DE_A  &mt DE_ESZETT DE_S  &as DE_D              &as DE_F           &as DE_G           &as DE_H           &as DE_J              &as DE_K                     &mt LA(DE_L) DE_L               &mt DE_LESS_THAN DE_ACUTE
+&kp LEFT_COMMAND  &as DE_Y  &mt LA(DE_C) DE_X   &mt LG(DE_C) DE_C     &mt LG(DE_V) DE_V  &as DE_B           &mt LA(DE_N) DE_N  &as DE_M              &mt DE_APOSTROPHE DE_COMMA   &mt DE_DOUBLE_QUOTES DE_PERIOD  &mt DE_CARET DE_MINUS      &mt DE_EXCL DE_QUESTION
+                                                &mt LEFT_CONTROL TAB  &sk LEFT_SHIFT     &mo_tap_lay 1 1    &kp ENTER          &kp DE_SPACE          &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
