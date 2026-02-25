@@ -165,6 +165,39 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        qu_qu_uc: qu_qu_uc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "QU_QU_UC";
+            bindings = <&qu_uc>, <&qu>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        sch_sch_uc: sch_sch_uc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SCH_SCH_UC";
+            bindings = <&sch_uc>, <&sch>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        ch_ch_uc: ch_ch_uc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CH_CH_UC";
+            bindings = <&ch_uc>, <&ch>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -250,6 +283,48 @@
             bindings = <&kp LA(LS(DE_N7)) &kp DE_A &kp DE_U &kp DE_T &kp DE_O &kp DE_C &kp DE_I &kp DE_T &kp DE_E &kp LA(DE_N5) &kp LA(DE_N6) &kp LA(DE_N8) &kp LA(DE_N9) &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>;
             label = "AUTOCITE";
         };
+
+        qu: qu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_Q &kp DE_U>;
+            label = "QU";
+        };
+
+        qu_uc: qu_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_Q) &kp DE_U>;
+            label = "QU_UC";
+        };
+
+        sch: sch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_S &kp DE_C &kp DE_H>;
+            label = "SCH";
+        };
+
+        sch_uc: sch_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_S) &kp DE_C &kp DE_H>;
+            label = "SCH_UC";
+        };
+
+        ch: ch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_C &kp DE_H>;
+            label = "CH";
+        };
+
+        ch_uc: ch_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_C) &kp DE_H>;
+            label = "CH_UC";
+        };
     };
 
     keymap {
@@ -274,19 +349,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &as DE_Q  &as DE_W  &as DE_E              &as DE_R                &as DE_T           &as DE_Z   &as DE_U      &as DE_I                     &as DE_O       &as DE_P
-                  &as DE_A  &as DE_S  &as DE_D              &as DE_F                &as DE_G           &as DE_H   &as DE_J      &as DE_K                     &as DE_L       &as DE_ACUTE
-&kp LEFT_COMMAND  &as DE_Y  &as DE_X  &as DE_C              &as DE_V                &as DE_B           &as DE_N   &as DE_M      &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
-                                      &mt LEFT_CONTROL TAB  &sl_shift LEFT_SHIFT 1  &mo_tap_lay 2 2    &kp ENTER  &kp DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0  &as DE_W  &as DE_E              &as DE_R                &as DE_T           &as DE_Z   &as DE_U      &as DE_I                     &as DE_O       &as DE_P
+                  &as DE_A       &as DE_S  &as DE_D              &as DE_F                &as DE_G           &as DE_H   &as DE_J      &as DE_K                     &as DE_L       &as DE_ACUTE
+&kp LEFT_COMMAND  &as DE_Y       &as DE_X  &as DE_C              &as DE_V                &as DE_B           &as DE_N   &as DE_M      &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
+                                           &mt LEFT_CONTROL TAB  &sl_shift LEFT_SHIFT 1  &mo_tap_lay 2 2    &kp ENTER  &kp DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
         mod_layer {
             bindings = <
-        &trans           &trans         &kp LA(DE_E)  &trans                         &kp DE_AMPERSAND    &trans               &as DE_U_UMLAUT  &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &kp DE_PERCENT
-        &as DE_A_UMLAUT  &kp DE_ESZETT  &trans        &trans                         &trans              &trans               &trans           &trans                           &kp RA(DE_L)          &as DE_LESS_THAN
-&trans  &trans           &as LA(DE_C)   &kp LG(DE_C)  &mt LG(LA(LS(DE_V))) LG(DE_V)  &trans              &ene_ene LA(DE_N) 0  &trans           &kp DE_APOSTROPHE                &kp DE_DOUBLE_QUOTES  &as DE_CARET      &mt LA(DE_N1) LA(DE_ESZETT)
-                                        &trans        &trans                         &trans              &trans               &trans           &trans
+        &as DE_Q         &trans           &kp LA(DE_E)  &trans                         &kp DE_AMPERSAND    &kp DE_ESZETT        &as DE_U_UMLAUT  &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &kp DE_PERCENT
+        &as DE_A_UMLAUT  &sch_sch_uc 0 0  &trans        &trans                         &trans              &ch_ch_uc 0 0        &trans           &trans                           &kp RA(DE_L)          &as DE_LESS_THAN
+&trans  &trans           &as LA(DE_C)     &kp LG(DE_C)  &mt LG(LA(LS(DE_V))) LG(DE_V)  &trans              &ene_ene LA(DE_N) 0  &trans           &kp DE_APOSTROPHE                &kp DE_DOUBLE_QUOTES  &as DE_CARET      &mt LA(DE_N1) LA(DE_ESZETT)
+                                          &trans        &trans                         &trans              &trans               &trans           &trans
             >;
 
             label = "MOD";
