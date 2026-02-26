@@ -108,12 +108,32 @@
             bindings = <&autocite>;
             key-positions = <21 22>;
         };
+
+        the {
+            bindings = <&the_the_uc 0 0>;
+            key-positions = <4 15>;
+        };
+
+        glsxtrlong {
+            bindings = <&glsxtrlong>;
+            key-positions = <14 18>;
+        };
+
+        and {
+            bindings = <&and_and_uc 0 0>;
+            key-positions = <10 26>;
+        };
+
+        und {
+            bindings = <&und_und_uc 0 0>;
+            key-positions = <2 4>;
+        };
     };
 
     behaviors {
-        mo_tap_lay: mo_tap_lay {
+        to_mo_layer: to_mo_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "MO_TAP_LAY";
+            label = "TO_MO_LAYER";
             bindings = <&mo>, <&to>;
 
             #binding-cells = <2>;
@@ -133,9 +153,9 @@
             quick-tap-ms = <100>;
         };
 
-        sl_shift: sl_shift {
+        sticky_lay_kp: sticky_lay_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "SL_SHIFT";
+            label = "STICKY_LAY_KP";
             bindings = <&kp>, <&sl>;
 
             #binding-cells = <2>;
@@ -197,6 +217,51 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
+        };
+
+        the_the_uc: the_the_uc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THE_THE_UC";
+            bindings = <&the_uc>, <&the>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        and_and_uc: and_and_uc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AND_AND_UC";
+            bindings = <&and_uc>, <&and>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        und_und_uc: und_und_uc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "UND_UND_UC";
+            bindings = <&und_uc>, <&und>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        kp_mo_layer: kp_mo_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_MO_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            hold-while-undecided;
+            quick-tap-ms = <100>;
         };
     };
 
@@ -325,6 +390,55 @@
             bindings = <&kp LS(DE_C) &kp DE_H>;
             label = "CH_UC";
         };
+
+        the: the {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_T &kp DE_H &kp DE_E>;
+            label = "THE";
+        };
+
+        the_uc: the_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_T) &kp DE_H &kp DE_E>;
+            label = "THE_UC";
+        };
+
+        glsxtrlong: glsxtrlong {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LS(DE_N7)) &kp DE_G &kp DE_L &kp DE_S &kp DE_E &kp DE_X &kp DE_T &kp DE_R &kp DE_A &kp DE_L &kp DE_O &kp DE_N &kp DE_G &kp LA(DE_N8) &kp LA(DE_N9) &kp LEFT_ARROW>;
+            label = "GLSXTRLONG";
+        };
+
+        and: and {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_A &kp DE_N &kp DE_D>;
+            label = "AND";
+        };
+
+        and_uc: and_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_A) &kp DE_N &kp DE_D>;
+            label = "AND_UC";
+        };
+
+        und: und {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U &kp DE_N &kp DE_D>;
+            label = "UND";
+        };
+
+        und_uc: und_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_U) &kp DE_N &kp DE_D>;
+            label = "UND_UC";
+        };
     };
 
     keymap {
@@ -349,10 +463,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &qu_qu_uc 0 0  &as DE_W  &as DE_E              &as DE_R                &as DE_T           &as DE_Z   &as DE_U      &as DE_I                     &as DE_O       &as DE_P
-                  &as DE_A       &as DE_S  &as DE_D              &as DE_F                &as DE_G           &as DE_H   &as DE_J      &as DE_K                     &as DE_L       &as DE_ACUTE
-&kp LEFT_COMMAND  &as DE_Y       &as DE_X  &as DE_C              &as DE_V                &as DE_B           &as DE_N   &as DE_M      &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
-                                           &mt LEFT_CONTROL TAB  &sl_shift LEFT_SHIFT 1  &mo_tap_lay 2 2    &kp ENTER  &kp DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0  &as DE_W  &as DE_E              &as DE_R          &as DE_T                       &as DE_Z   &as DE_U                 &as DE_I                     &as DE_O       &as DE_P
+                  &as DE_A       &as DE_S  &as DE_D              &as DE_F          &as DE_G                       &as DE_H   &as DE_J                 &as DE_K                     &as DE_L       &as DE_ACUTE
+&kp LEFT_COMMAND  &as DE_Y       &as DE_X  &as DE_C              &as DE_V          &as DE_B                       &as DE_N   &as DE_M                 &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
+                                           &mt LEFT_CONTROL TAB  &to_mo_layer 2 2  &sticky_lay_kp LEFT_SHIFT 1    &kp ENTER  &kp_mo_layer 2 DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
@@ -373,27 +487,27 @@
                   &mt LA(DE_N7) DE_PERIOD         &mt DE_SLASH DE_N7  &mt LA(DE_N5) DE_N8            &mt LA(DE_N6) DE_N9             &mt LG(DE_MINUS) DE_MINUS    &kp C_PREV  &mt LG(LS(DE_N7)) LA(LS(DE_N7))  &mt LA(UP_ARROW) UP_ARROW      &kp DE_HASH                      &kp C_BRIGHTNESS_INC
                   &mt LG(LS(DE_N4)) DE_ASTERISK   &mt DE_COLON DE_N4  &mt DE_LEFT_PARENTHESIS DE_N5  &mt DE_RIGHT_PARENTHESIS DE_N6  &mt LG(DE_PLUS) DE_PLUS      &kp C_PP    &mt LA(LEFT_ARROW) LEFT_ARROW    &mt LA(DOWN_ARROW) DOWN_ARROW  &mt LA(RIGHT_ARROW) RIGHT_ARROW  &kp C_BRIGHTNESS_DEC
 &kp LEFT_COMMAND  &mt LG(LS(DE_N3)) LA(DE_MINUS)  &mt DE_EQUAL DE_N1  &mt LA(DE_N8) DE_N2            &mt LA(DE_N9) DE_N3             &mt LG(DE_N0) DE_N0          &kp C_NEXT  &kp K_MUTE                       &kp C_VOL_DN                   &kp C_VOL_UP                     &to 4                 &kp LC(DE_D)
-                                                                      &mt LEFT_CONTROL TAB           &sk LEFT_SHIFT                  &mo_tap_lay 3 0              &kp ENTER   &kp DE_SPACE                     &mt LA(BACKSPACE) BACKSPACE
+                                                                      &mt LEFT_CONTROL TAB           &to_mo_layer 3 0                &sk LEFT_SHIFT               &kp ENTER   &kp DE_SPACE                     &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
         base_dupe {
             label = "DUPE";
             bindings = <
-                  &as DE_Q  &as DE_W  &as DE_E              &as DE_R                &as DE_T    &as DE_Z   &as DE_U      &as DE_I                     &as DE_O       &as DE_P
-                  &as DE_A  &as DE_S  &as DE_D              &as DE_F                &as DE_G    &as DE_H   &as DE_J      &as DE_K                     &as DE_L       &as DE_ACUTE
-&kp LEFT_COMMAND  &as DE_Y  &as DE_X  &as DE_C              &as DE_V                &as DE_B    &as DE_N   &as DE_M      &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
-                                      &mt LEFT_CONTROL TAB  &sl_shift LEFT_SHIFT 1  &none       &kp ENTER  &kp DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0  &as DE_W  &as DE_E              &as DE_R  &as DE_T    &as DE_Z   &as DE_U      &as DE_I                     &as DE_O       &as DE_P
+                  &as DE_A       &as DE_S  &as DE_D              &as DE_F  &as DE_G    &as DE_H   &as DE_J      &as DE_K                     &as DE_L       &as DE_ACUTE
+&kp LEFT_COMMAND  &as DE_Y       &as DE_X  &as DE_C              &as DE_V  &as DE_B    &as DE_N   &as DE_M      &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
+                                           &mt LEFT_CONTROL TAB  &none     &none       &kp ENTER  &kp DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
         function_layer {
             label = "FN";
             bindings = <
-                  &none  &kp F7  &kp F8                &kp F9          &none      &none         &none           &none                        &none       &none
-                  &none  &kp F4  &kp F5                &kp F6          &none      &none         &none           &none                        &none       &none
-&kp LEFT_COMMAND  &none  &kp F1  &kp F2                &kp F3          &kp F10    &out OUT_TOG  &bt BT_CLR_ALL  &bt BT_PRV                   &bt BT_NXT  &to 2  &none
-                                 &mt LEFT_CONTROL TAB  &sk LEFT_SHIFT  &to 0      &kp ENTER     &kp DE_SPACE    &mt LA(BACKSPACE) BACKSPACE
+                  &none  &kp F7  &kp F8                &kp F9  &none             &none         &none           &none                        &none       &none
+                  &none  &kp F4  &kp F5                &kp F6  &none             &none         &none           &none                        &none       &none
+&kp LEFT_COMMAND  &none  &kp F1  &kp F2                &kp F3  &kp F10           &out OUT_TOG  &bt BT_CLR_ALL  &bt BT_PRV                   &bt BT_NXT  &to 2  &none
+                                 &mt LEFT_CONTROL TAB  &to 0   &sk LEFT_SHIFT    &kp ENTER     &kp DE_SPACE    &mt LA(BACKSPACE) BACKSPACE
             >;
         };
     };
