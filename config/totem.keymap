@@ -133,6 +133,16 @@
             bindings = <&sch_sch_uc 0 0>;
             key-positions = <11 15>;
         };
+
+        copy {
+            bindings = <&kp LG(DE_C)>;
+            key-positions = <33 24>;
+        };
+
+        paste {
+            bindings = <&mt LG(LA(LS(DE_V))) LG(DE_V)>;
+            key-positions = <33 25>;
+        };
     };
 
     behaviors {
