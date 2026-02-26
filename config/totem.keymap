@@ -136,17 +136,17 @@
 
         copy {
             bindings = <&kp LG(DE_C)>;
-            key-positions = <13 14>;
+            key-positions = <13 12>;
         };
 
         paste {
             bindings = <&mt LG(LA(LS(DE_V))) LG(DE_V)>;
-            key-positions = <25 24>;
+            key-positions = <24 23>;
         };
 
         mfg {
             bindings = <&mfg>;
-            key-positions = <13 14 27>;
+            key-positions = <13 27 14>;
         };
 
         lg {
@@ -511,7 +511,7 @@
 
         mod_layer {
             bindings = <
-        &as DE_Q         &trans         &kp LA(DE_E)  &trans        &kp DE_AMPERSAND                 &trans               &as DE_U_UMLAUT  &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &kp DE_PERCENT
+        &as DE_Q         &trans         &kp LA(DE_E)  &trans        &kp DE_AMPERSAND                 &trans               &as DE_U_UMLAUT  &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &trans
         &as DE_A_UMLAUT  &kp DE_ESZETT  &trans        &trans        &trans                           &trans               &kp DE_CARET     &kp LS(DE_CARET)                 &kp RA(DE_L)          &as DE_LESS_THAN
 &trans  &trans           &trans         &as LA(DE_C)  &kp LG(DE_C)  &mt LG(LA(LS(DE_V))) LG(DE_V)    &ene_ene LA(DE_N) 0  &trans           &kp DE_APOSTROPHE                &kp DE_DOUBLE_QUOTES  &kp LA(DE_MINUS)  &mt LA(DE_N1) LA(DE_ESZETT)
                                         &trans        &trans        &trans                           &trans               &trans           &trans
@@ -523,7 +523,7 @@
         number_layer {
             label = "NUM";
             bindings = <
-                  &mt LG(LS(DE_N3)) LG(LS(DE_N4))  &mt DE_EQUAL DE_N7     &mt LA(DE_N5) DE_N8            &mt LA(DE_N6) DE_N9             &mt LG(DE_MINUS) DE_MINUS    &kp C_PREV  &mt LG(LS(DE_N7)) LA(LS(DE_N7))  &mt LA(UP_ARROW) UP_ARROW      &kp DE_HASH                      &kp C_BRIGHTNESS_INC
+                  &mt LG(LS(DE_N3)) LG(LS(DE_N4))  &mt DE_EQUAL DE_N7     &mt LA(DE_N5) DE_N8            &mt LA(DE_N6) DE_N9             &mt LG(DE_MINUS) DE_MINUS    &kp C_PREV  &mt LG(LS(DE_N7)) LA(LS(DE_N7))  &mt LA(UP_ARROW) UP_ARROW      &mt DE_HASH DE_PERCENT           &kp C_BRIGHTNESS_INC
                   &mt LA(DE_N7) DE_SLASH           &mt DE_ASTERISK DE_N4  &mt DE_LEFT_PARENTHESIS DE_N5  &mt DE_RIGHT_PARENTHESIS DE_N6  &mt LG(DE_PLUS) DE_PLUS      &kp C_PP    &mt LA(LEFT_ARROW) LEFT_ARROW    &mt LA(DOWN_ARROW) DOWN_ARROW  &mt LA(RIGHT_ARROW) RIGHT_ARROW  &kp C_BRIGHTNESS_DEC
 &kp LEFT_COMMAND  &mt DE_COMMA DE_PERIOD           &mt DE_COLON DE_N1     &mt LA(DE_N8) DE_N2            &mt LA(DE_N9) DE_N3             &mt LG(DE_N0) DE_N0          &kp C_NEXT  &kp K_MUTE                       &kp C_VOL_DN                   &kp C_VOL_UP                     &to 4                 &kp LC(DE_D)
                                                                           &mt LEFT_CONTROL TAB           &sk LEFT_SHIFT                  &to_mo_layer 3 0             &kp ENTER   &kp_mo_layer 3 DE_SPACE          &mt LA(BACKSPACE) BACKSPACE
