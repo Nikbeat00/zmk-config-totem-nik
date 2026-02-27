@@ -129,11 +129,6 @@
             key-positions = <2 4>;
         };
 
-        sch {
-            bindings = <&sch_sch_uc 0 0>;
-            key-positions = <11 15>;
-        };
-
         copy {
             bindings = <&kp LG(DE_C)>;
             key-positions = <13 12>;
@@ -293,7 +288,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_U2_LC";
             #binding-cells = <0>;
-            bindings = <&u_acute_lc>, <&u_grave_lc>, <&u_circo_lc>;
+            bindings = <&u_grave_lc>, <&u_circo_lc>;
 
             tapping-term-ms = <300>;
         };
@@ -313,7 +308,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_U2_UC";
             #binding-cells = <0>;
-            bindings = <&u_acute_uc>, <&u_grave_uc>, <&u_circo_uc>;
+            bindings = <&u_grave_uc>, <&u_circo_uc>;
 
             tapping-term-ms = <500>;
         };
@@ -333,7 +328,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_U1_LC";
             #binding-cells = <0>;
-            bindings = <&kp DE_U>, <&kp DE_U_UMLAUT>;
+            bindings = <&kp DE_U>, <&kp DE_U_UMLAUT>, <&u_acute_lc>;
 
             tapping-term-ms = <300>;
         };
@@ -342,7 +337,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_U1_UC";
             #binding-cells = <0>;
-            bindings = <&kp LS(DE_U)>, <&kp LS(DE_U_UMLAUT)>;
+            bindings = <&kp LS(DE_U)>, <&kp LS(DE_U_UMLAUT)>, <&u_acute_uc>;
 
             tapping-term-ms = <500>;
         };
@@ -362,7 +357,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_S_LC";
             #binding-cells = <0>;
-            bindings = <&kp DE_S>, <&kp DE_ESZETT>;
+            bindings = <&kp DE_S>, <&sch>;
 
             tapping-term-ms = <300>;
         };
@@ -370,7 +365,7 @@
         tap_dance_s_combined: tap_dance_s_combined {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_DANCE_S_COMBINED";
-            bindings = <&kp>, <&tap_dance_s_lc>;
+            bindings = <&tap_dance_s_uc>, <&tap_dance_s_lc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -382,7 +377,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_A1_LC";
             #binding-cells = <0>;
-            bindings = <&kp DE_A>, <&kp DE_A_UMLAUT>;
+            bindings = <&kp DE_A>, <&kp DE_A_UMLAUT>, <&a_acute_lc>;
 
             tapping-term-ms = <300>;
         };
@@ -391,7 +386,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_A1_UC";
             #binding-cells = <0>;
-            bindings = <&kp LS(DE_A)>, <&kp LS(DE_A_UMLAUT)>;
+            bindings = <&kp LS(DE_A)>, <&kp LS(DE_A_UMLAUT)>, <&a_acute_uc>;
 
             tapping-term-ms = <500>;
         };
@@ -411,7 +406,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_A2_LC";
             #binding-cells = <0>;
-            bindings = <&a_acute_lc>, <&a_grave_lc>, <&a_circo_lc>;
+            bindings = <&a_grave_lc>, <&a_circo_lc>;
 
             tapping-term-ms = <300>;
         };
@@ -420,7 +415,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_A2_UC";
             #binding-cells = <0>;
-            bindings = <&a_acute_uc>, <&a_grave_uc>, <&a_circo_uc>;
+            bindings = <&a_grave_uc>, <&a_circo_uc>;
 
             tapping-term-ms = <500>;
         };
@@ -440,11 +435,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_E2_LC";
             #binding-cells = <0>;
-            bindings =
-                <&e_acute_lc>,
-                <&e_grave_lc>,
-                <&e_circo_lc>,
-                <&e_trema_lc>;
+            bindings = <&e_grave_lc>, <&e_circo_lc>, <&e_trema_lc>;
 
             tapping-term-ms = <300>;
         };
@@ -453,11 +444,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_E2_UC";
             #binding-cells = <0>;
-            bindings =
-                <&e_acute_uc>,
-                <&e_grave_uc>,
-                <&e_circo_uc>,
-                <&e_trema_uc>;
+            bindings = <&e_grave_uc>, <&e_circo_uc>, <&e_trema_uc>;
 
             tapping-term-ms = <500>;
         };
@@ -477,11 +464,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_I2_LC";
             #binding-cells = <0>;
-            bindings =
-                <&i_acute_lc>,
-                <&i_grave_lc>,
-                <&i_circo_lc>,
-                <&i_trema_lc>;
+            bindings = <&i_grave_lc>, <&i_circo_lc>, <&i_trema_lc>;
 
             tapping-term-ms = <300>;
         };
@@ -490,11 +473,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_I2_UC";
             #binding-cells = <0>;
-            bindings =
-                <&i_acute_uc>,
-                <&i_grave_uc>,
-                <&i_circo_uc>,
-                <&i_trema_uc>;
+            bindings = <&i_grave_uc>, <&i_circo_uc>, <&i_trema_uc>;
 
             tapping-term-ms = <500>;
         };
@@ -514,7 +493,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_O1_LC";
             #binding-cells = <0>;
-            bindings = <&kp DE_O>, <&kp DE_O_UMLAUT>;
+            bindings = <&kp DE_O>, <&kp DE_O_UMLAUT>, <&o_acute_lc>;
 
             tapping-term-ms = <300>;
         };
@@ -523,7 +502,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_O1_UC";
             #binding-cells = <0>;
-            bindings = <&kp LS(DE_O)>, <&kp LS(DE_O_UMLAUT)>;
+            bindings = <&kp LS(DE_O)>, <&kp LS(DE_O_UMLAUT)>, <&o_acute_uc>;
 
             tapping-term-ms = <500>;
         };
@@ -543,7 +522,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_O2_LC";
             #binding-cells = <0>;
-            bindings = <&o_acute_lc>, <&o_grave_lc>, <&o_circo_lc>;
+            bindings = <&o_grave_lc>, <&o_circo_lc>;
 
             tapping-term-ms = <300>;
         };
@@ -552,15 +531,131 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_O2_UC";
             #binding-cells = <0>;
-            bindings = <&o_acute_uc>, <&o_grave_uc>, <&o_circo_uc>;
+            bindings = <&o_grave_uc>, <&o_circo_uc>;
 
             tapping-term-ms = <500>;
+        };
+
+        tap_dance_s_uc: tap_dance_s_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_S_UC";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_S)>, <&sch_uc>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_e1_lc: tap_dance_e1_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_E1_LC";
+            #binding-cells = <0>;
+            bindings = <&kp DE_E>, <&e_acute_lc>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_e1_uc: tap_dance_e1_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_E1_UC";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_E)>, <&e_acute_uc>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_e1_combined: tap_dance_e1_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_E1_COMBINED";
+            bindings = <&tap_dance_e1_uc>, <&tap_dance_e1_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        tap_dance_i1_lc: tap_dance_i1_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_I1_LC";
+            #binding-cells = <0>;
+            bindings = <&kp DE_I>, <&i_acute_lc>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_i1_uc: tap_dance_i1_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_I1_UC";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_I)>, <&i_acute_uc>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_i1_combined: tap_dance_i1_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_I1_COMBINED";
+            bindings = <&tap_dance_i1_uc>, <&tap_dance_i1_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        tap_dance_z_lc: tap_dance_z_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_Z_LC";
+            #binding-cells = <0>;
+            bindings = <&kp DE_Z>, <&kp DE_ESZETT>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_z_combined: tap_dance_z_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_Z_COMBINED";
+            bindings = <&kp>, <&tap_dance_z_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
         };
 
         tap_dance_o2_combined: tap_dance_o2_combined {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_DANCE_O2_COMBINED";
             bindings = <&tap_dance_o2_uc>, <&tap_dance_o2_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        tap_dance_n1_lc: tap_dance_n1_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_N1_LC";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N>, <&ene>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_n1_uc: tap_dance_n1_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_N1_UC";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_N)>, <&ene_uc>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_n1_combined: tap_dance_n1_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_N1_COMBINED";
+            bindings = <&tap_dance_n1_uc>, <&tap_dance_n1_lc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -995,6 +1090,13 @@
             bindings = <&kp DE_LESS_THAN &kp LS(DE_O)>;
             label = "O_CIRCO_UC";
         };
+
+        ene_uc: ene_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_N) &kp LS(DE_N)>;
+            label = "ENE_UC";
+        };
     };
 
     keymap {
@@ -1019,19 +1121,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &qu_qu_uc 0 0               &as DE_W                          &as DE_E              &as DE_R                &as DE_T            &as DE_Z   &tap_dance_u1_combined 0 0  &as DE_I                     &tap_dance_o1_combined 0 0  &as DE_P
-                  &tap_dance_a1_combined 0 0  &tap_dance_s_combined LS(DE_S) 0  &as DE_D              &as DE_F                &as DE_G            &as DE_H   &as DE_J                    &as DE_K                     &as DE_L                    &trans
-&kp LEFT_COMMAND  &as DE_Y                    &as DE_X                          &as DE_C              &as DE_V                &as DE_B            &as DE_N   &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
-                                                                                &mt LEFT_CONTROL TAB  &sticky_lay_mo_lay 1 1  &to_mo_layer 2 2    &kp ENTER  &kp_mo_layer 2 DE_SPACE     &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0               &as DE_W                   &tap_dance_e1_combined 0 0  &as DE_R                &as DE_T            &tap_dance_z_combined LS(DE_Z) 0  &tap_dance_u1_combined 0 0  &tap_dance_i1_combined 0 0   &tap_dance_o1_combined 0 0  &as DE_P
+                  &tap_dance_a1_combined 0 0  &tap_dance_s_combined 0 0  &as DE_D                    &as DE_F                &as DE_G            &as DE_H                          &as DE_J                    &as DE_K                     &as DE_L                    &trans
+&kp LEFT_COMMAND  &as DE_Y                    &as DE_X                   &as DE_C                    &as DE_V                &as DE_B            &tap_dance_n1_combined 0 0        &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
+                                                                         &mt LEFT_CONTROL TAB        &sticky_lay_mo_lay 1 1  &to_mo_layer 2 2    &kp ENTER                         &kp_mo_layer 2 DE_SPACE     &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
         mod_layer {
             bindings = <
-        &as DE_Q                    &trans           &tap_dance_e2_combined 0 0  &kp LA(DE_E)   &kp DE_AMPERSAND                 &trans               &tap_dance_u2_combined 0 0  &tap_dance_i2_combined 0 0  &tap_dance_o2_combined 0 0  &trans
-        &tap_dance_a2_combined 0 0  &sch_sch_uc 0 0  &mt LA(DE_X) DE_EQUAL       &kp LA(DE_N0)  &trans                           &trans               &kp DE_CARET                &kp LS(DE_CARET)            &kp RA(DE_L)                &kp LS(DE_LESS_THAN)
-&trans  &trans                      &trans           &as LA(DE_C)                &kp LG(DE_C)   &mt LG(LA(LS(DE_V))) LG(DE_V)    &ene_ene LA(DE_N) 0  &kp LA(DE_PERIOD)           &kp DE_APOSTROPHE           &kp DE_DOUBLE_QUOTES        &kp LA(DE_MINUS)      &mt LA(DE_N1) LA(DE_ESZETT)
-                                                     &trans                      &trans         &trans                           &trans               &trans                      &trans
+        &as DE_Q                    &trans  &tap_dance_e2_combined 0 0  &kp LA(DE_E)   &kp DE_AMPERSAND                 &trans        &tap_dance_u2_combined 0 0  &tap_dance_i2_combined 0 0  &tap_dance_o2_combined 0 0  &trans
+        &tap_dance_a2_combined 0 0  &trans  &mt LA(DE_X) DE_EQUAL       &kp LA(DE_N0)  &trans                           &trans        &kp DE_CARET                &kp LS(DE_CARET)            &kp RA(DE_L)                &kp LS(DE_LESS_THAN)
+&trans  &trans                      &trans  &as LA(DE_C)                &kp LG(DE_C)   &mt LG(LA(LS(DE_V))) LG(DE_V)    &kp LA(DE_N)  &kp LA(DE_PERIOD)           &kp DE_APOSTROPHE           &kp DE_DOUBLE_QUOTES        &kp LA(DE_MINUS)      &mt LA(DE_N1) LA(DE_ESZETT)
+                                            &trans                      &trans         &trans                           &trans        &trans                      &trans
             >;
 
             label = "MOD";
@@ -1043,27 +1145,27 @@
                   &mt LG(LS(DE_N3)) LG(LS(DE_N4))  &mt DE_EQUAL DE_N7     &mt LA(DE_N5) DE_N8            &mt LA(DE_N6) DE_N9             &mt LG(DE_MINUS) DE_MINUS    &kp C_PREV  &mt LG(LS(DE_N7)) LA(LS(DE_N7))  &mt LA(UP_ARROW) UP_ARROW      &mt DE_HASH DE_PERCENT           &kp C_BRIGHTNESS_INC
                   &mt LA(DE_N7) DE_SLASH           &mt DE_ASTERISK DE_N4  &mt DE_LEFT_PARENTHESIS DE_N5  &mt DE_RIGHT_PARENTHESIS DE_N6  &mt LG(DE_PLUS) DE_PLUS      &kp C_PP    &mt LA(LEFT_ARROW) LEFT_ARROW    &mt LA(DOWN_ARROW) DOWN_ARROW  &mt LA(RIGHT_ARROW) RIGHT_ARROW  &kp C_BRIGHTNESS_DEC
 &kp LEFT_COMMAND  &mt DE_COMMA DE_PERIOD           &mt DE_COLON DE_N1     &mt LA(DE_N8) DE_N2            &mt LA(DE_N9) DE_N3             &mt LG(DE_N0) DE_N0          &kp C_NEXT  &kp K_MUTE                       &kp C_VOL_DN                   &kp C_VOL_UP                     &to 4                 &kp LC(DE_D)
-                                                                          &mt LEFT_CONTROL TAB           &sk LEFT_SHIFT                  &to_mo_layer 3 0             &kp ENTER   &kp_mo_layer 3 DE_SPACE          &mt LA(BACKSPACE) BACKSPACE
+                                                                          &mt LEFT_CONTROL TAB           &none                           &to_mo_layer 3 0             &kp ENTER   &kp_mo_layer 3 DE_SPACE          &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
         base_dupe {
             label = "DUPE";
             bindings = <
-                  &qu_qu_uc 0 0  &as DE_W  &as DE_E              &as DE_R  &as DE_T    &as DE_Z   &as DE_U      &as DE_I                     &as DE_O       &as DE_P
-                  &as DE_A       &as DE_S  &as DE_D              &as DE_F  &as DE_G    &as DE_H   &as DE_J      &as DE_K                     &as DE_L       &as DE_ACUTE
-&kp LEFT_COMMAND  &as DE_Y       &as DE_X  &as DE_C              &as DE_V  &as DE_B    &as DE_N   &as DE_M      &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
-                                           &mt LEFT_CONTROL TAB  &none     &none       &kp ENTER  &kp DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0               &as DE_W                   &tap_dance_e1_combined 0 0  &as DE_R  &as DE_T    &tap_dance_z_combined LS(DE_Z) 0  &tap_dance_u1_combined 0 0  &tap_dance_i1_combined 0 0   &tap_dance_o1_combined 0 0  &as DE_P
+                  &tap_dance_a1_combined 0 0  &tap_dance_s_combined 0 0  &as DE_D                    &as DE_F  &as DE_G    &as DE_H                          &as DE_J                    &as DE_K                     &as DE_L                    &trans
+&kp LEFT_COMMAND  &as DE_Y                    &as DE_X                   &as DE_C                    &as DE_V  &as DE_B    &tap_dance_n1_combined 0 0        &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
+                                                                         &mt LEFT_CONTROL TAB        &none     &none       &kp ENTER                         &kp DE_SPACE                &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
         function_layer {
             label = "FN";
             bindings = <
-                  &none  &kp F7  &kp F8                &kp F9          &none      &none         &none           &none                        &none       &none
-                  &none  &kp F4  &kp F5                &kp F6          &none      &none         &none           &none                        &none       &none
-&kp LEFT_COMMAND  &none  &kp F1  &kp F2                &kp F3          &kp F10    &out OUT_TOG  &bt BT_CLR_ALL  &bt BT_PRV                   &bt BT_NXT  &to 2  &none
-                                 &mt LEFT_CONTROL TAB  &sk LEFT_SHIFT  &to 0      &kp ENTER     &kp DE_SPACE    &mt LA(BACKSPACE) BACKSPACE
+                  &none  &kp F7  &kp F8                &kp F9  &none      &none         &none           &none                        &none       &none
+                  &none  &kp F4  &kp F5                &kp F6  &none      &none         &none           &none                        &none       &none
+&kp LEFT_COMMAND  &none  &kp F1  &kp F2                &kp F3  &kp F10    &out OUT_TOG  &bt BT_CLR_ALL  &bt BT_PRV                   &bt BT_NXT  &to 2  &none
+                                 &mt LEFT_CONTROL TAB  &none   &to 0      &kp ENTER     &kp DE_SPACE    &mt LA(BACKSPACE) BACKSPACE
             >;
         };
     };
