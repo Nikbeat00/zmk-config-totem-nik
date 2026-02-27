@@ -298,40 +298,6 @@
             tapping-term-ms = <170>;
         };
 
-        u_acute_macro: u_acute_macro {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_ACUTE_MACRO";
-            bindings = <&u_acute_uc>, <&u_acute_lc>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-        };
-
-        u_grave_macro: u_grave_macro {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_GRAVE_MACRO";
-            bindings = <&u_grave_uc>, <&u_grave_lc>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            bindings =
-                <&as DE_U_UMLAUT>,
-                <&u_acute_macro 0 0>,
-                <&u_grave_macro 0 0>;
-
-            tapping-term-ms = <170>;
-        };
-
         sticky_lay_mo_lay: sticky_lay_mo_lay {
             compatible = "zmk,behavior-hold-tap";
             label = "STICKY_LAY_MO_LAY";
@@ -350,6 +316,15 @@
             bindings = <&kp LS(DE_U_UMLAUT)>, <&u_acute_uc>, <&u_grave_uc>;
 
             tapping-term-ms = <170>;
+        };
+
+        tap_dance_test: tap_dance_test {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_TEST";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT>, <&kp DE_A>, <&kp DE_B>;
+
+            tapping-term-ms = <300>;
         };
     };
 
@@ -602,7 +577,7 @@
 
         mod_layer {
             bindings = <
-        &as DE_Q         &trans         &kp LA(DE_E)           &trans         &kp DE_AMPERSAND                 &trans               &tap_dance_u_lc    &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &trans
+        &as DE_Q         &trans         &kp LA(DE_E)           &trans         &kp DE_AMPERSAND                 &trans               &tap_dance_test    &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &trans
         &as DE_A_UMLAUT  &kp DE_ESZETT  &mt LA(DE_X) DE_EQUAL  &kp LA(DE_N0)  &trans                           &trans               &kp DE_CARET       &kp LS(DE_CARET)                 &kp RA(DE_L)          &as DE_LESS_THAN
 &trans  &trans           &trans         &as LA(DE_C)           &kp LG(DE_C)   &mt LG(LA(LS(DE_V))) LG(DE_V)    &ene_ene LA(DE_N) 0  &kp LA(DE_PERIOD)  &kp DE_APOSTROPHE                &kp DE_DOUBLE_QUOTES  &kp LA(DE_MINUS)  &mt LA(DE_N1) LA(DE_ESZETT)
                                         &trans                 &trans         &trans                           &trans               &trans             &trans
