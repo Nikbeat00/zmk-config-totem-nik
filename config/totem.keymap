@@ -289,14 +289,11 @@
             quick-tap-ms = <100>;
         };
 
-        tap_dance_u: tap_dance_u {
+        tap_dance_u_lc: tap_dance_u_lc {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_U";
+            label = "TAP_DANCE_U_LC";
             #binding-cells = <0>;
-            bindings =
-                <&kp DE_U_UMLAUT>,
-                <&u_acute_macro 0 0>,
-                <&u_grave_macro 0 0>;
+            bindings = <&kp DE_U_UMLAUT>, <&u_acute_lc>, <&u_grave_lc>;
 
             tapping-term-ms = <170>;
         };
@@ -304,7 +301,7 @@
         u_acute_macro: u_acute_macro {
             compatible = "zmk,behavior-hold-tap";
             label = "U_ACUTE_MACRO";
-            bindings = <&u_acute_uc>, <&u_acute>;
+            bindings = <&u_acute_uc>, <&u_acute_lc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -315,7 +312,7 @@
         u_grave_macro: u_grave_macro {
             compatible = "zmk,behavior-hold-tap";
             label = "U_GRAVE_MACRO";
-            bindings = <&u_grave_uc>, <&u_grave>;
+            bindings = <&u_grave_uc>, <&u_grave_lc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -344,6 +341,15 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
+        };
+
+        tap_dance_u_uc: tap_dance_u_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_U_UC";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_U_UMLAUT)>, <&u_acute_uc>, <&u_grave_uc>;
+
+            tapping-term-ms = <170>;
         };
     };
 
@@ -536,14 +542,14 @@
             label = "LG";
         };
 
-        u_acute: u_acute {
+        u_acute_lc: u_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DE_ACUTE &kp DE_U>;
             label = "U_ACUTE";
         };
 
-        u_grave: u_grave {
+        u_grave_lc: u_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(DE_ACUTE) &kp DE_U>;
@@ -596,7 +602,7 @@
 
         mod_layer {
             bindings = <
-        &as DE_Q         &trans         &kp LA(DE_E)           &trans         &kp DE_AMPERSAND                 &trans               &tap_dance_u       &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &trans
+        &as DE_Q         &trans         &kp LA(DE_E)           &trans         &kp DE_AMPERSAND                 &trans               &tap_dance_u_lc    &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &trans
         &as DE_A_UMLAUT  &kp DE_ESZETT  &mt LA(DE_X) DE_EQUAL  &kp LA(DE_N0)  &trans                           &trans               &kp DE_CARET       &kp LS(DE_CARET)                 &kp RA(DE_L)          &as DE_LESS_THAN
 &trans  &trans           &trans         &as LA(DE_C)           &kp LG(DE_C)   &mt LG(LA(LS(DE_V))) LG(DE_V)    &ene_ene LA(DE_N) 0  &kp LA(DE_PERIOD)  &kp DE_APOSTROPHE                &kp DE_DOUBLE_QUOTES  &kp LA(DE_MINUS)  &mt LA(DE_N1) LA(DE_ESZETT)
                                         &trans                 &trans         &trans                           &trans               &trans             &trans
