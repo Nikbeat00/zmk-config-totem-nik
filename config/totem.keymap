@@ -293,7 +293,10 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_U";
             #binding-cells = <0>;
-            bindings = <&as DE_U_UMLAUT>, <&u_acute>, <&u_grave>;
+            bindings =
+                <&kp DE_U_UMLAUT>,
+                <&u_acute_macro 0 0>,
+                <&u_grave_macro 0 0>;
 
             tapping-term-ms = <170>;
         };
