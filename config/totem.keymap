@@ -377,6 +377,196 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        tap_dance_a1_lc: tap_dance_a1_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_A1_LC";
+            #binding-cells = <0>;
+            bindings = <&kp DE_A>, <&kp DE_A_UMLAUT>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_a1_uc: tap_dance_a1_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_A1_UC";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_A)>, <&kp LS(DE_A_UMLAUT)>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_a1_combined: tap_dance_a1_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_A1_COMBINED";
+            bindings = <&tap_dance_a1_uc>, <&tap_dance_a1_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        tap_dance_a2_lc: tap_dance_a2_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_A2_LC";
+            #binding-cells = <0>;
+            bindings = <&a_acute_lc>, <&a_grave_lc>, <&a_circo_lc>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_a2_uc: tap_dance_a2_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_A2_UC";
+            #binding-cells = <0>;
+            bindings = <&a_acute_uc>, <&a_grave_uc>, <&a_circo_uc>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_a2_combined: tap_dance_a2_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_A2_COMBINED";
+            bindings = <&tap_dance_a2_uc>, <&tap_dance_a2_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        tap_dance_e2_lc: tap_dance_e2_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_E2_LC";
+            #binding-cells = <0>;
+            bindings =
+                <&e_acute_lc>,
+                <&e_grave_lc>,
+                <&e_circo_lc>,
+                <&e_trema_lc>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_e2_uc: tap_dance_e2_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_E2_UC";
+            #binding-cells = <0>;
+            bindings =
+                <&e_acute_uc>,
+                <&e_grave_uc>,
+                <&e_circo_uc>,
+                <&e_trema_uc>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_e2_combined: tap_dance_e2_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_E2_COMBINED";
+            bindings = <&tap_dance_e2_uc>, <&tap_dance_e2_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        tap_dance_i2_lc: tap_dance_i2_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_I2_LC";
+            #binding-cells = <0>;
+            bindings =
+                <&i_acute_lc>,
+                <&i_grave_lc>,
+                <&i_circo_lc>,
+                <&i_trema_lc>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_i2_uc: tap_dance_i2_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_I2_UC";
+            #binding-cells = <0>;
+            bindings =
+                <&i_acute_uc>,
+                <&i_grave_uc>,
+                <&i_circo_uc>,
+                <&i_trema_uc>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_i2_combined: tap_dance_i2_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_I2_COMBINED";
+            bindings = <&tap_dance_i2_uc>, <&tap_dance_i2_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        tap_dance_o1_lc: tap_dance_o1_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_O1_LC";
+            #binding-cells = <0>;
+            bindings = <&kp DE_O>, <&kp DE_O_UMLAUT>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_o1_uc: tap_dance_o1_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_O1_UC";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_O)>, <&kp LS(DE_O_UMLAUT)>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_o1_combined: tap_dance_o1_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_O1_COMBINED";
+            bindings = <&tap_dance_o1_uc>, <&tap_dance_o1_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        tap_dance_o2_lc: tap_dance_o2_lc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_O2_LC";
+            #binding-cells = <0>;
+            bindings = <&o_acute_lc>, <&o_grave_lc>, <&o_circo_lc>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tap_dance_o2_uc: tap_dance_o2_uc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_O2_UC";
+            #binding-cells = <0>;
+            bindings = <&o_acute_uc>, <&o_grave_uc>, <&o_circo_uc>;
+
+            tapping-term-ms = <500>;
+        };
+
+        tap_dance_o2_combined: tap_dance_o2_combined {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_DANCE_O2_COMBINED";
+            bindings = <&tap_dance_o2_uc>, <&tap_dance_o2_lc>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -609,6 +799,202 @@
             bindings = <&kp DE_LESS_THAN &kp LS(DE_U)>;
             label = "U_CIRCO_UC";
         };
+
+        a_acute_lc: a_acute_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp DE_A>;
+            label = "A_ACUTE_LC";
+        };
+
+        a_grave_lc: a_grave_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp DE_A>;
+            label = "A_GRAVE_LC";
+        };
+
+        a_circo_lc: a_circo_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN &kp DE_A>;
+            label = "A_CIRCO_LC";
+        };
+
+        a_acute_uc: a_acute_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp LS(DE_A)>;
+            label = "A_ACUTE_UC";
+        };
+
+        a_grave_uc: a_grave_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp LS(DE_A)>;
+            label = "A_GRAVE_UC";
+        };
+
+        a_circo_uc: a_circo_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN &kp LS(DE_A)>;
+            label = "A_CIRCO_UC";
+        };
+
+        e_acute_lc: e_acute_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp DE_E>;
+            label = "E_ACUTE_LC";
+        };
+
+        e_grave_lc: e_grave_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp DE_E>;
+            label = "E_GRAVE_LC";
+        };
+
+        e_circo_lc: e_circo_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN &kp DE_E>;
+            label = "E_CIRCO_LC";
+        };
+
+        e_trema_lc: e_trema_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_U) &kp DE_E>;
+            label = "E_TREMA_LC";
+        };
+
+        e_acute_uc: e_acute_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp LS(DE_E)>;
+            label = "E_ACUTE_UC";
+        };
+
+        e_grave_uc: e_grave_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp LS(DE_E)>;
+            label = "E_GRAVE_UC";
+        };
+
+        e_circo_uc: e_circo_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN &kp LS(DE_E)>;
+            label = "E_CIRCO_UC";
+        };
+
+        e_trema_uc: e_trema_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_U) &kp LS(DE_E)>;
+            label = "E_TREMA_UC";
+        };
+
+        i_acute_lc: i_acute_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp DE_I>;
+            label = "I_ACUTE_LC";
+        };
+
+        i_grave_lc: i_grave_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp DE_I>;
+            label = "I_GRAVE_LC";
+        };
+
+        i_circo_lc: i_circo_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN &kp DE_I>;
+            label = "I_CIRCO_LC";
+        };
+
+        i_trema_lc: i_trema_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_U) &kp DE_I>;
+            label = "I_TREMA_LC";
+        };
+
+        i_acute_uc: i_acute_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp LS(DE_I)>;
+            label = "I_ACUTE_UC";
+        };
+
+        i_grave_uc: i_grave_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp LS(DE_I)>;
+            label = "I_GRAVE_UC";
+        };
+
+        i_circo_uc: i_circo_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN &kp LS(DE_I)>;
+            label = "I_CIRCO_UC";
+        };
+
+        i_trema_uc: i_trema_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_U) &kp LS(DE_I)>;
+            label = "I_TREMA_UC";
+        };
+
+        o_acute_lc: o_acute_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp DE_O>;
+            label = "O_ACUTE_LC";
+        };
+
+        o_grave_lc: o_grave_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp DE_O>;
+            label = "O_GRAVE_LC";
+        };
+
+        o_circo_lc: o_circo_lc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN &kp DE_O>;
+            label = "O_CIRCO_LC";
+        };
+
+        o_acute_uc: o_acute_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp LS(DE_O)>;
+            label = "O_ACUTE_UC";
+        };
+
+        o_grave_uc: o_grave_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp LS(DE_O)>;
+            label = "O_GRAVE_UC";
+        };
+
+        o_circo_uc: o_circo_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN &kp LS(DE_O)>;
+            label = "O_CIRCO_UC";
+        };
     };
 
     keymap {
@@ -633,19 +1019,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &qu_qu_uc 0 0  &as DE_W                      &as DE_E              &as DE_R                &as DE_T            &as DE_Z   &tap_dance_u1_combined 0 0  &as DE_I                     &as DE_O       &as DE_P
-                  &as DE_A       &tap_dance_s_combined DE_S 0  &as DE_D              &as DE_F                &as DE_G            &as DE_H   &as DE_J                    &as DE_K                     &as DE_L       &trans
-&kp LEFT_COMMAND  &as DE_Y       &as DE_X                      &as DE_C              &as DE_V                &as DE_B            &as DE_N   &as DE_M                    &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
-                                                               &mt LEFT_CONTROL TAB  &sticky_lay_mo_lay 1 1  &to_mo_layer 2 2    &kp ENTER  &kp_mo_layer 2 DE_SPACE     &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0               &as DE_W                          &as DE_E              &as DE_R                &as DE_T            &as DE_Z   &tap_dance_u1_combined 0 0  &as DE_I                     &tap_dance_o1_combined 0 0  &as DE_P
+                  &tap_dance_a1_combined 0 0  &tap_dance_s_combined LS(DE_S) 0  &as DE_D              &as DE_F                &as DE_G            &as DE_H   &as DE_J                    &as DE_K                     &as DE_L                    &trans
+&kp LEFT_COMMAND  &as DE_Y                    &as DE_X                          &as DE_C              &as DE_V                &as DE_B            &as DE_N   &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
+                                                                                &mt LEFT_CONTROL TAB  &sticky_lay_mo_lay 1 1  &to_mo_layer 2 2    &kp ENTER  &kp_mo_layer 2 DE_SPACE     &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
         mod_layer {
             bindings = <
-        &as DE_Q         &trans           &trans                 &kp LA(DE_E)   &kp DE_AMPERSAND                 &trans               &tap_dance_u2_combined 0 0  &diaeresis_diaeresis LA(DE_U) 0  &none                 &trans
-        &as DE_A_UMLAUT  &sch_sch_uc 0 0  &mt LA(DE_X) DE_EQUAL  &kp LA(DE_N0)  &trans                           &trans               &kp DE_CARET                &kp LS(DE_CARET)                 &kp RA(DE_L)          &kp LS(DE_LESS_THAN)
-&trans  &trans           &trans           &as LA(DE_C)           &kp LG(DE_C)   &mt LG(LA(LS(DE_V))) LG(DE_V)    &ene_ene LA(DE_N) 0  &kp LA(DE_PERIOD)           &kp DE_APOSTROPHE                &kp DE_DOUBLE_QUOTES  &kp LA(DE_MINUS)      &mt LA(DE_N1) LA(DE_ESZETT)
-                                          &trans                 &trans         &trans                           &trans               &trans                      &trans
+        &as DE_Q                    &trans           &tap_dance_e2_combined 0 0  &kp LA(DE_E)   &kp DE_AMPERSAND                 &trans               &tap_dance_u2_combined 0 0  &tap_dance_i2_combined 0 0  &tap_dance_o2_combined 0 0  &trans
+        &tap_dance_a2_combined 0 0  &sch_sch_uc 0 0  &mt LA(DE_X) DE_EQUAL       &kp LA(DE_N0)  &trans                           &trans               &kp DE_CARET                &kp LS(DE_CARET)            &kp RA(DE_L)                &kp LS(DE_LESS_THAN)
+&trans  &trans                      &trans           &as LA(DE_C)                &kp LG(DE_C)   &mt LG(LA(LS(DE_V))) LG(DE_V)    &ene_ene LA(DE_N) 0  &kp LA(DE_PERIOD)           &kp DE_APOSTROPHE           &kp DE_DOUBLE_QUOTES        &kp LA(DE_MINUS)      &mt LA(DE_N1) LA(DE_ESZETT)
+                                                     &trans                      &trans         &trans                           &trans               &trans                      &trans
             >;
 
             label = "MOD";
