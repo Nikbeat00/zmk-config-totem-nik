@@ -331,6 +331,17 @@
 
             tapping-term-ms = <170>;
         };
+
+        sticky_lay_mo_lay: sticky_lay_mo_lay {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_LAY_MO_LAY";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -573,10 +584,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &qu_qu_uc 0 0  &as DE_W  &as DE_E              &as DE_R                     &as DE_T            &as DE_Z   &as DE_U                 &as DE_I                     &as DE_O       &as DE_P
-                  &as DE_A       &as DE_S  &as DE_D              &as DE_F                     &as DE_G            &as DE_H   &as DE_J                 &as DE_K                     &as DE_L       &as DE_ACUTE
-&kp LEFT_COMMAND  &as DE_Y       &as DE_X  &as DE_C              &as DE_V                     &as DE_B            &as DE_N   &as DE_M                 &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
-                                           &mt LEFT_CONTROL TAB  &sticky_lay_kp LEFT_SHIFT 1  &to_mo_layer 2 2    &kp ENTER  &kp_mo_layer 2 DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0  &as DE_W  &as DE_E              &as DE_R                &as DE_T            &as DE_Z   &as DE_U                 &as DE_I                     &as DE_O       &as DE_P
+                  &as DE_A       &as DE_S  &as DE_D              &as DE_F                &as DE_G            &as DE_H   &as DE_J                 &as DE_K                     &as DE_L       &as DE_ACUTE
+&kp LEFT_COMMAND  &as DE_Y       &as DE_X  &as DE_C              &as DE_V                &as DE_B            &as DE_N   &as DE_M                 &as DE_COMMA                 &as DE_PERIOD  &as DE_MINUS  &mt DE_EXCLAMATION DE_QUESTION
+                                           &mt LEFT_CONTROL TAB  &sticky_lay_mo_lay 1 1  &to_mo_layer 2 2    &kp ENTER  &kp_mo_layer 2 DE_SPACE  &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
