@@ -288,6 +288,49 @@
             hold-while-undecided;
             quick-tap-ms = <100>;
         };
+
+        tap_dance_u: tap_dance_u {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_U";
+            #binding-cells = <0>;
+            bindings = <&as DE_U_UMLAUT>, <&u_acute>, <&u_grave>;
+
+            tapping-term-ms = <170>;
+        };
+
+        u_acute_macro: u_acute_macro {
+            compatible = "zmk,behavior-hold-tap";
+            label = "U_ACUTE_MACRO";
+            bindings = <&u_acute_uc>, <&u_acute>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        u_grave_macro: u_grave_macro {
+            compatible = "zmk,behavior-hold-tap";
+            label = "U_GRAVE_MACRO";
+            bindings = <&u_grave_uc>, <&u_grave>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings =
+                <&as DE_U_UMLAUT>,
+                <&u_acute_macro 0 0>,
+                <&u_grave_macro 0 0>;
+
+            tapping-term-ms = <170>;
+        };
     };
 
     macros {
@@ -478,6 +521,34 @@
             bindings = <&kp LS(DE_L) &kp DE_I &kp DE_E &kp DE_B &kp DE_E &kp DE_SPACE &kp LS(DE_G) &kp DE_R &kp DE_U_UMLAUT &kp DE_ESZETT &kp DE_E>;
             label = "LG";
         };
+
+        u_acute: u_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp DE_U>;
+            label = "U_ACUTE";
+        };
+
+        u_grave: u_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp DE_U>;
+            label = "U_GRAVE";
+        };
+
+        u_acute_uc: u_acute_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ACUTE &kp LS(DE_U)>;
+            label = "U_ACUTE_UC";
+        };
+
+        u_grave_uc: u_grave_uc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_ACUTE) &kp LS(DE_U)>;
+            label = "U_GRAVE_UC";
+        };
     };
 
     keymap {
@@ -511,10 +582,10 @@
 
         mod_layer {
             bindings = <
-        &as DE_Q         &trans         &kp LA(DE_E)  &trans        &kp DE_AMPERSAND                 &trans               &as DE_U_UMLAUT  &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &trans
-        &as DE_A_UMLAUT  &kp DE_ESZETT  &trans        &trans        &trans                           &trans               &kp DE_CARET     &kp LS(DE_CARET)                 &kp RA(DE_L)          &as DE_LESS_THAN
-&trans  &trans           &trans         &as LA(DE_C)  &kp LG(DE_C)  &mt LG(LA(LS(DE_V))) LG(DE_V)    &ene_ene LA(DE_N) 0  &trans           &kp DE_APOSTROPHE                &kp DE_DOUBLE_QUOTES  &kp LA(DE_MINUS)  &mt LA(DE_N1) LA(DE_ESZETT)
-                                        &trans        &trans        &trans                           &trans               &trans           &trans
+        &as DE_Q         &trans         &kp LA(DE_E)           &trans         &kp DE_AMPERSAND                 &trans               &tap_dance_u       &diaeresis_diaeresis LA(DE_U) 0  &as DE_O_UMLAUT       &trans
+        &as DE_A_UMLAUT  &kp DE_ESZETT  &mt LA(DE_X) DE_EQUAL  &kp LA(DE_N0)  &trans                           &trans               &kp DE_CARET       &kp LS(DE_CARET)                 &kp RA(DE_L)          &as DE_LESS_THAN
+&trans  &trans           &trans         &as LA(DE_C)           &kp LG(DE_C)   &mt LG(LA(LS(DE_V))) LG(DE_V)    &ene_ene LA(DE_N) 0  &kp LA(DE_PERIOD)  &kp DE_APOSTROPHE                &kp DE_DOUBLE_QUOTES  &kp LA(DE_MINUS)  &mt LA(DE_N1) LA(DE_ESZETT)
+                                        &trans                 &trans         &trans                           &trans               &trans             &trans
             >;
 
             label = "MOD";
