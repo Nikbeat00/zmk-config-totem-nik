@@ -126,7 +126,7 @@
 
         und {
             bindings = <&und_und_uc 0 0>;
-            key-positions = <2 4>;
+            key-positions = <6 26>;
         };
 
         copy {
