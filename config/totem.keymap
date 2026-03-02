@@ -1148,10 +1148,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &qu_qu_uc 0 0               &as DE_W                   &as DE_E              &as DE_R                     &as DE_T            &tap_dance_z_combined LS(DE_Z) 0  &tap_dance_u1_combined 0 0  &as DE_I                     &tap_dance_o1_combined 0 0  &as DE_P
-                  &tap_dance_a1_combined 0 0  &tap_dance_s_combined 0 0  &as DE_D              &as DE_F                     &as DE_G            &as DE_H                          &as DE_J                    &as DE_K                     &as DE_L                    &mt DE_DOUBLE_QUOTES DE_APOSTROPHE
-&kp LEFT_COMMAND  &as DE_Y                    &as DE_X                   &as DE_C              &as DE_V                     &as DE_B            &as DE_N                          &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS                        &mt DE_EXCLAMATION DE_QUESTION
-                                                                         &mt LEFT_CONTROL TAB  &sticky_lay_kp LEFT_SHIFT 1  &to_mo_layer 2 2    &kp ENTER                         &kp_mo_layer 2 DE_SPACE     &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0               &as DE_W  &as DE_E              &as DE_R                     &as DE_T            &tap_dance_z_combined LS(DE_Z) 0  &tap_dance_u1_combined 0 0  &as DE_I                     &tap_dance_o1_combined 0 0  &as DE_P
+                  &tap_dance_a1_combined 0 0  &as DE_S  &as DE_D              &as DE_F                     &as DE_G            &as DE_H                          &as DE_J                    &as DE_K                     &as DE_L                    &mt DE_DOUBLE_QUOTES DE_APOSTROPHE
+&kp LEFT_COMMAND  &as DE_Y                    &as DE_X  &as DE_C              &as DE_V                     &as DE_B            &as DE_N                          &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS                        &mt DE_EXCLAMATION DE_QUESTION
+                                                        &mt LEFT_CONTROL TAB  &sticky_lay_kp LEFT_SHIFT 1  &to_mo_layer 2 2    &kp ENTER                         &kp_mo_layer 2 DE_SPACE     &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
@@ -1179,10 +1179,10 @@
         base_dupe {
             label = "DUPE";
             bindings = <
-                  &qu_qu_uc 0 0               &as DE_W                   &as DE_E              &as DE_R  &as DE_T    &tap_dance_z_combined LS(DE_Z) 0  &tap_dance_u1_combined 0 0  &as DE_I                     &tap_dance_o1_combined 0 0  &as DE_P
-                  &tap_dance_a1_combined 0 0  &tap_dance_s_combined 0 0  &as DE_D              &as DE_F  &as DE_G    &as DE_H                          &as DE_J                    &as DE_K                     &as DE_L                    &mt DE_DOUBLE_QUOTES DE_APOSTROPHE
-&kp LEFT_COMMAND  &as DE_Y                    &as DE_X                   &as DE_C              &as DE_V  &as DE_B    &as DE_N                          &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS                        &mt DE_EXCLAMATION DE_QUESTION
-                                                                         &mt LEFT_CONTROL TAB  &none     &none       &kp ENTER                         &kp DE_SPACE                &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0               &as DE_W  &as DE_E              &as DE_R  &as DE_T    &tap_dance_z_combined LS(DE_Z) 0  &tap_dance_u1_combined 0 0  &as DE_I                     &tap_dance_o1_combined 0 0  &as DE_P
+                  &tap_dance_a1_combined 0 0  &as DE_S  &as DE_D              &as DE_F  &as DE_G    &as DE_H                          &as DE_J                    &as DE_K                     &as DE_L                    &mt DE_DOUBLE_QUOTES DE_APOSTROPHE
+&kp LEFT_COMMAND  &as DE_Y                    &as DE_X  &as DE_C              &as DE_V  &as DE_B    &as DE_N                          &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS                        &mt DE_EXCLAMATION DE_QUESTION
+                                                        &mt LEFT_CONTROL TAB  &none     &none       &kp ENTER                         &kp DE_SPACE                &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
