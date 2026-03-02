@@ -46,7 +46,7 @@
 
         reload {
             bindings = <&kp LG(DE_R)>;
-            key-positions = <22 23 24>;
+            key-positions = <32 33 34>;
         };
 
         control {
@@ -54,9 +54,9 @@
             key-positions = <11 12>;
         };
 
-        compile {
-            bindings = <&kp LG(ENTER)>;
-            key-positions = <32 33 34>;
+        numlayer {
+            bindings = <&to 2>;
+            key-positions = <22 23 24>;
         };
 
         homelayer {
@@ -1166,10 +1166,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &qu_qu_uc 0 0               &as DE_W  &as DE_E              &as DE_R                     &as DE_T            &tap_dance_z_combined LS(DE_Z) 0  &tap_dance_u1_combined 0 0  &as DE_I                     &tap_dance_o1_combined 0 0  &as DE_P
-                  &tap_dance_a1_combined 0 0  &as DE_S  &as DE_D              &as DE_F                     &as DE_G            &as DE_H                          &as DE_J                    &as DE_K                     &as DE_L                    &mt DE_DOUBLE_QUOTES DE_APOSTROPHE
-&kp LEFT_COMMAND  &as DE_Y                    &as DE_X  &as DE_C              &as DE_V                     &as DE_B            &as DE_N                          &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS                        &mt DE_EXCLAMATION DE_QUESTION
-                                                        &mt LEFT_CONTROL TAB  &sticky_lay_kp LEFT_SHIFT 1  &to_mo_layer 2 2    &tap_dance_L1_enter               &kp_mo_layer 2 DE_SPACE     &mt LA(BACKSPACE) BACKSPACE
+                  &qu_qu_uc 0 0               &as DE_W  &as DE_E              &as DE_R                     &as DE_T                  &tap_dance_z_combined LS(DE_Z) 0  &tap_dance_u1_combined 0 0  &as DE_I                     &tap_dance_o1_combined 0 0  &as DE_P
+                  &tap_dance_a1_combined 0 0  &as DE_S  &as DE_D              &as DE_F                     &as DE_G                  &as DE_H                          &as DE_J                    &as DE_K                     &as DE_L                    &mt DE_DOUBLE_QUOTES DE_APOSTROPHE
+&kp LEFT_COMMAND  &as DE_Y                    &as DE_X  &as DE_C              &as DE_V                     &as DE_B                  &as DE_N                          &as DE_M                    &as DE_COMMA                 &as DE_PERIOD               &as DE_MINUS                        &mt DE_EXCLAMATION DE_QUESTION
+                                                        &mt LEFT_CONTROL TAB  &sticky_lay_kp LEFT_SHIFT 1  &sticky_lay_mo_lay 2 2    &tap_dance_L1_enter               &kp_mo_layer 2 DE_SPACE     &mt LA(BACKSPACE) BACKSPACE
             >;
         };
 
@@ -1189,8 +1189,18 @@
             bindings = <
                   &mt LG(LS(DE_N3)) LG(LS(DE_N4))  &mt DE_EQUAL DE_N7     &mt LA(DE_N5) DE_N8            &mt LA(DE_N6) DE_N9             &mt LG(DE_MINUS) DE_MINUS    &kp C_PREV           &mt LG(LS(DE_N7)) LA(LS(DE_N7))  &mt LA(UP_ARROW) UP_ARROW      &mt DE_HASH DE_PERCENT           &kp C_BRIGHTNESS_INC
                   &mt LA(DE_N7) DE_SLASH           &mt DE_ASTERISK DE_N4  &mt DE_LEFT_PARENTHESIS DE_N5  &mt DE_RIGHT_PARENTHESIS DE_N6  &mt LG(DE_PLUS) DE_PLUS      &kp C_PP             &mt LA(LEFT_ARROW) LEFT_ARROW    &mt LA(DOWN_ARROW) DOWN_ARROW  &mt LA(RIGHT_ARROW) RIGHT_ARROW  &kp C_BRIGHTNESS_DEC
-&kp LEFT_COMMAND  &mt DE_COMMA DE_PERIOD           &mt DE_COLON DE_N1     &mt LA(DE_N8) DE_N2            &mt LA(DE_N9) DE_N3             &mt LG(DE_N0) DE_N0          &kp C_NEXT           &kp K_MUTE                       &kp C_VOL_DN                   &kp C_VOL_UP                     &to 4                 &kp LC(DE_D)
-                                                                          &mt LEFT_CONTROL TAB           &sticky_lay_kp LEFT_SHIFT 3     &to_mo_layer 3 0             &tap_dance_L3_enter  &kp_mo_layer 3 DE_SPACE          &mt LA(BACKSPACE) BACKSPACE
+&kp LEFT_COMMAND  &mt DE_COMMA DE_PERIOD           &mt DE_COLON DE_N1     &mt LA(DE_N8) DE_N2            &mt LA(DE_N9) DE_N3             &mt LG(DE_N0) DE_N0          &kp C_NEXT           &kp K_MUTE                       &kp C_VOL_DN                   &kp C_VOL_UP                     &to 5                 &kp LC(DE_D)
+                                                                          &mt LEFT_CONTROL TAB           &sticky_lay_kp LEFT_SHIFT 3     &sticky_lay_mo_lay 4 4       &tap_dance_L3_enter  &kp_mo_layer 4 DE_SPACE          &mt LA(BACKSPACE) BACKSPACE
+            >;
+        };
+
+        mod_dupe {
+            label = "DUPE2";
+            bindings = <
+        &as DE_Q                    &mt LS(DE_LESS_THAN) DE_DOLLAR  &tap_dance_e2_combined 0 0  &kp LA(DE_E)   &kp DE_AMPERSAND    &trans        &tap_dance_u2_combined 0 0  &tap_dance_i2_combined 0 0  &tap_dance_o2_combined 0 0  &mt LA(DE_U) DE_LESS_THAN
+        &tap_dance_a2_combined 0 0  &sch_sch_uc 0 0                 &mt LA(DE_X) DE_EQUAL       &kp LA(DE_N0)  &trans              &trans        &kp DE_CARET                &kp LS(DE_CARET)            &kp RA(DE_L)                &as DE_ACUTE
+&trans  &trans                      &trans                          &as LA(DE_C)                &trans         &trans              &ene_ene 0 0  &mt LA(DE_N) LA(DE_PERIOD)  &trans                      &trans                      &kp LA(DE_MINUS)           &mt LA(DE_N1) LA(DE_ESZETT)
+                                                                    &trans                      &trans         &trans              &trans        &trans                      &trans
             >;
         };
 
