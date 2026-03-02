@@ -379,7 +379,7 @@
             #binding-cells = <0>;
             bindings = <&kp DE_A>, <&kp DE_A_UMLAUT>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
         };
 
         tap_dance_a1_uc: tap_dance_a1_uc {
@@ -388,7 +388,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(DE_A)>, <&kp LS(DE_A_UMLAUT)>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
         };
 
         tap_dance_a1_combined: tap_dance_a1_combined {
